@@ -176,7 +176,8 @@ cv.destroyAllWindows() # 열려있는 모든 OpenCV 창을 닫습니다.
 
 ### 실습 02 결과
 * **최종 결과물:** `+`, `-` 키로 붓 크기를 조절하여 다양한 두께로 그린 최종 화면
-> <img width="495" height="527" alt="과제2번 출력" src="https://github.com/user-attachments/assets/ff8d1238-b5f5-479c-a77c-5d51b0c5a946" />
+> <img width="796" height="556" alt="과제2번 출력" src="https://github.com/user-attachments/assets/6670feb7-b897-4505-8043-a05bb6f4a795" />
+
 
 
 ### 실습 03 결과
