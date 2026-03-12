@@ -15,9 +15,19 @@
   <img width="640" height="480" alt="corner_detection" src="https://github.com/user-attachments/assets/908635b5-f91c-4876-9373-c2112a3a4e68" />
 
 
-* **최종 결과물 (왜곡 보정):**
-  *(설명: 좌측은 렌즈 왜곡이 포함된 원본 이미지, 우측은 도출된 카메라 파라미터를 적용해 직선이 올바르게 펴진 최종 보정 이미지입니다.)*
-  <img width="1292" height="524" alt="1번과제 최종" src="https://github.com/user-attachments/assets/5266440a-4c8b-408d-8623-06772e6e36fb" />
+* **최종 결과물 (Calibration 파라미터 및 왜곡 보정):**
+  *(설명: 아래 결과는 캘리브레이션을 통해 카메라의 내부 파라미터를 도출하고, 이를 적용해 렌즈 왜곡을 보정한 결과입니다.)*
+
+  <img width="1292" height="524" alt="1번과제 최종" src="https://github.com/user-attachments/assets/9eb73315-41fa-45d3-8b7a-83ed79c4acbf" />
+
+  
+  <img width="470" height="153" alt="1번과제 결과" src="https://github.com/user-attachments/assets/0e74d0ed-c064-47a1-aa2d-9bf0df3de5ba" />
+
+
+  **[도출된 파라미터 상세 분석]**
+  - **Camera Matrix ($K$):** 초점 거리($f_x, f_y \approx 532.17$)와 주점($c_x \approx 342.51, c_y \approx 233.92$)을 포함한 내부 행렬을 산출하였습니다.
+  - **Distortion Coefficients:** 5개의 왜곡 계수를 통해 렌즈의 방사 및 접선 왜곡을 수치화하였습니다.
+  - **Reprojection Error (RMS):** **0.1584...** 로 측정되었습니다. 이는 실제 픽셀과 모델 간의 오차가 매우 적음을 의미하며, 캘리브레이션이 성공적으로 수행되었음을 나타냅니다.
 
 
 ### 🔑 핵심 함수 정리
