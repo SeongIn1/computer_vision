@@ -52,23 +52,20 @@
 [cite_start]스테레오 카메라(Left/Right)에서 촬영된 동일한 장면의 두 이미지를 분석하여 픽셀 위치 차이(Disparity)를 구하고, 물리적 거리($Z = \frac{fB}{d}$)인 Depth Map을 추정합니다[cite: 108, 115, 125]. [cite_start]추가로 지정된 3개의 관심 영역(Painting, Frog, Teddy)에 대해 평균 거리를 계산합니다[cite: 111].
 
 ### 📸 결과물
-* **중간 결과물 (Disparity Map):**
-  *(설명: 좌우 이미지의 매칭을 통해 계산된 Disparity Map으로, 붉은색에 가까울수록 값이 커(가까운 물체) 시차가 큼을 나타냅니다.)*
-  <img width="450" height="375" alt="left_roi" src="https://github.com/user-attachments/assets/e3e63c9f-4410-4881-a0bb-6becfd30f0d1" />
-  <img width="450" height="375" alt="right_roi" src="https://github.com/user-attachments/assets/3733410a-eae5-44da-8797-38b091303a61" />
-  <img width="450" height="375" alt="disparity_map" src="https://github.com/user-attachments/assets/c2c30fa3-99be-4fef-a845-3211638a2ea5" />
+중간 및 최종 결과물 종합:
+(설명: 좌측 상단부터 시계방향으로 Disparity Map, Left ROI, Right ROI, Depth Map 결과입니다.)
+<img width="916" height="832" alt="3번과제 최종" src="https://github.com/user-attachments/assets/a76aa68b-c46c-4e9b-b25f-e7aee2e0852b" />
 
+수치 분석 결과 (Terminal):
+(설명: 각 ROI 영역의 평균 Disparity와 계산된 평균 Depth 값입니다.)
+<img width="389" height="74" alt="3번과제 결과" src="https://github.com/user-attachments/assets/e37ea07b-a9a8-49b3-8cfd-dc71dfd237f3" />
 
+[영역별 평균 거리 분석 결과]
 
+가장 가까운 객체: Frog (개구리 인형) (평균 Depth: 2.51)
 
-* **최종 결과물 (Depth Map & ROI 분석):**
-  *(설명: 카메라 초점 거리와 Baseline을 이용해 실제 거리를 추정한 Depth Map 및 각 영역(ROI)의 위치를 표시한 결과입니다.)*
-  <img width="450" height="375" alt="depth_map" src="https://github.com/user-attachments/assets/6800f81b-f108-4a94-ba7e-9d3914222caa" />
-
-  **[영역별 평균 거리 분석 결과]**
-  * **가장 가까운 객체:** Teddy
-  * **가장 먼 객체:** Painting
-  [cite_start]*(해석: Disparity 값이 클수록 물체는 카메라에 더 가깝게 위치합니다[cite: 114].)*
+가장 먼 객체: Painting (액자 그림) (평균 Depth: 4.44)
+(해석: 분석 결과 Frog의 평균 시차(Disparity)가 33.68로 가장 크며, 이에 따라 계산된 실제 거리(Depth)가 가장 짧게 측정되었습니다.)
 
 ### 🔑 핵심 함수 정리
 * [cite_start]`cv2.StereoBM_create(numDisparities, blockSize)`: Block Matching 알고리즘을 사용하여 좌우 이미지로부터 Disparity Map을 계산하는 객체를 생성합니다[cite: 110, 132, 133].
