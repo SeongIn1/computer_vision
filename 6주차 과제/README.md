@@ -278,7 +278,7 @@ Google의 **Mediapipe Face Landmarker** 모델을 사용하여 사진 속 얼굴
 ### 🖼️ 중간 및 최종 결과물
 
 <img width="522" height="526" alt="2번과제 결과" src="https://github.com/user-attachments/assets/320ae6a7-c3d5-4b42-bb27-715a8ac87b27" />
-
+결과 사진이 안 나와서 이슈의 이미지 폴더와 6주차 과제 폴더안에 2번과제 결과 이미지 파일 올렸습니다. 번거롭게 해서 죄송합니다
 
 
 
