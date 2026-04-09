@@ -278,7 +278,7 @@ Google의 **Mediapipe Face Landmarker** 모델을 사용하여 사진 속 얼굴
 ### 🖼️ 중간 및 최종 결과물
 
 
-![face_result](https://github.com/user-attachments/assets/a58f143e-46b8-4c15-87b7-dcacb6c5a633)
+![Image](https://github.com/user-attachments/assets/57a4de29-c113-4984-abff-909b7dca0e79)
 
 
 
